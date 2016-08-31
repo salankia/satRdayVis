@@ -65,29 +65,29 @@ toltip_ts_ratio <- function(x){
 shinyServer(function(input, output) {
   #################### Overall ##########################
   overallVis = reactive({
-    total %>% ggvis(x = ~total_number_of_passangers_per_month_log,
+    total %>% ggvis(x = ~total_number_of_passangers_per_month,
                     y = ~rank) %>%
-      group_by(total_number_of_passangers_per_month_log) %>%
+      group_by(total_number_of_passangers_per_month) %>%
       layer_bars(stroke = ~category) %>%
       layer_points(fill = ~category, size := 22)  %>% 
-      layer_text(x = ~total_number_of_passangers_per_month_log - 0.01,
+      layer_text(x = ~total_number_of_passangers_per_month - 0.01,
                  y = ~rank ,
                  text := ~region,
                  align := "right",
                  baseline := "bottom",
                  stroke = ~category) %>%
-      layer_rects(data = data.frame(x = c(1, 2, 3, 4, 5),
-                                   x2 = c(2, 3, 4, 5, 6),
-                                  y = rep(0.25, times = 5),
-                                  y2 = rep(-0.25, times = 5),
-                                  color = c("1", "2", "3", "4", "5")),
+      layer_rects(data = data.frame(x = 10**c(1, 2, 3, 4, 5),
+                                    x2 = 10**c(2, 3, 4, 5, 6),
+                                    y = rep(0.25, times = 5),
+                                    y2 = rep(-0.25, times = 5),
+                                    color = c("1", "2", "3", "4", "5")),
                   x = ~x, y = ~y, x2 = ~x2, y2 = ~y2, fill = ~ color,
                   stroke = ~color) %>%
       hide_legend("stroke") %>%
       hide_legend("fill") %>%
-      add_axis("x", title = "", grid = F, values = c(2:6)) %>%
+      add_axis("x", title = "", grid = F, values = 10**c(1:6)) %>%
       hide_axis("y") %>%
-      scale_numeric("x", nice = T, expand = 0.03) %>%
+      scale_numeric("x",trans="log", domain=c(5000,100000)) %>%
       scale_nominal("stroke", range = c("#3288bd", "#66c2a5", "#fdae61", "#d53e4f", "#5e4fa2")) %>%
       scale_nominal("fill", range = c("#3288bd", "#66c2a5", "#fdae61", "#d53e4f", "#5e4fa2")) %>%
       add_tooltip(toltip_text_summary, on = "hover") %>%

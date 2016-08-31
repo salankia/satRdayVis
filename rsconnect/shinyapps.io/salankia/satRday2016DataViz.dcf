@@ -2,8 +2,8 @@ name: satRday2016DataViz
 account: salankia
 server: shinyapps.io
 appId: 123263
-bundleId: 545837
+bundleId: 545954
 url: https://salankia.shinyapps.io/satRday2016DataViz/
-when: 1472666640.99433
+when: 1472674011.73296
 asMultiple: FALSE
 asStatic: FALSE
