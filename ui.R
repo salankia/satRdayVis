@@ -27,22 +27,23 @@ shinyUI(
              
              fluidRow(
                column(6, includeMarkdown("data/2.Rmd")),
-               column(3, ggvisOutput('wasted_abs'), style = "height:200px;")
+               column(4, ggvisOutput('wasted_abs'), style = "height:300px;")
              ), 
              fluidRow(
-               column(8, ggvisOutput('wasted'), style = "height:300px;")
+               column(10, ggvisOutput('wasted'))
              )
            )
   ),
   #################### Summer and Winter ################
   tabPanel("Seasonal changes", 
            fluidPage(
-             
-             title = "Can you name the most popular vacation destinations?",
+             fluidRow(
+               column(12, includeMarkdown("data/intro.Rmd")) 
+             ),
              
              fluidRow(
                column(6, ggvisOutput('map'), style = "height:300px;"),
-               column(4, includeText("data/intro_to_summer_winter.txt"))
+               column(6, includeMarkdown("data/3.Rmd"))
              ),
              
              hr(),
