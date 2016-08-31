@@ -164,7 +164,7 @@ shinyServer(function(input, output) {
     
     avg %>%
       ggvis(x = ~ avg_seat, y = ~ avg_utilization * 100 )%>%
-      layer_points() %>%
+      layer_points(fill = ~color) %>%
       layer_text(x = ~coordx + 2,
                  y = ~coordy ,
                  text := ~region,
@@ -172,10 +172,47 @@ shinyServer(function(input, output) {
                  baseline := "bottom") %>%
       add_axis("x", title = "Average seat capacity of a plane") %>%
       add_axis("y", title = "Average utilization of planes in %") %>%
-      scale_numeric("y", zero = T)
+      scale_nominal("fill", range = c("#1f78b4", "#33a02c", "#ff7f00", "#e31a1c", "#6a3d9a")) %>%
+#      scale_numeric("y", zero = T) %>%
+      hide_legend("fill")
   })
 
   
   scatterVis %>%
     bind_shiny("wasted")
+  
+  
+  ########## Wasted absolute value
+  
+  scatterAbsVis = reactive({
+    avg %>%
+      ggvis(x = ~ avg_seat, y = ~ avg_p_p)%>%
+      add_axis("x", title = "Average seat capacity of a plane") %>%
+      add_axis("y", title = "Average number of passengers on a plane") %>%
+      layer_paths(data = data.frame(x = c(40, 40, 260, 260), y = c(15, 40, 260, 235)),
+                  x = ~x, y = ~y, fill := "#a6cee3", opacity := 0.1) %>%
+      layer_paths(data = data.frame(x = c(40, 40, 260, 260), y = c(-10, 15, 235, 210)),
+                  x = ~x, y = ~y, fill := "#b2df8a", opacity := 0.1) %>%
+      layer_paths(data = data.frame(x = c(64, 40, 260, 260), y = c(-10, -10, 210, 185)),
+                  x = ~x, y = ~y, fill := "#fdbf6f", opacity := 0.1) %>%
+      layer_paths(data = data.frame(x = c(89, 64, 260, 260), y = c(-10, -10, 185, 160)),
+                  x = ~x, y = ~y, fill := "#fb9a99", opacity := 0.1) %>%
+      layer_paths(data = data.frame(x = c(118, 89, 260, 260), y = c(-10, -10, 160, 135)),
+                  x = ~x, y = ~y, fill := "#cab2d6", opacity := 0.1) %>%
+      scale_nominal("fill", range = c("#1f78b4", "#33a02c", "#ff7f00", "#e31a1c", "#6a3d9a")) %>%
+      scale_numeric("x", domain = c(45, 270)) %>%
+      scale_numeric("y", domain = c(0, 250)) %>%
+      hide_legend("stroke") %>% hide_legend("fill")  %>%
+      layer_points(fill = ~color)%>%
+      add_tooltip(function(x){
+        print(x)
+        if(!"color" %in% names(x)) return(NULL)
+        region <- avg$region[round(avg$avg_p_p, digits = 3) == round(x$avg_p_p, digits = 3) &
+                               round(x$avg_seat, digits = 3) == round(avg$avg_seat, digits = 3)]
+        print(region)
+        s <- paste0("", region)
+        s
+      }, on = "hover") 
+  })
+  scatterAbsVis %>% bind_shiny("wasted_abs")
 })

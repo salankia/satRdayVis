@@ -26,8 +26,11 @@ shinyUI(
              ),
              
              fluidRow(
-               column(12, includeMarkdown("data/2.Rmd")), 
-               column(6, ggvisOutput('wasted'), style = "height:300px;")
+               column(6, includeMarkdown("data/2.Rmd")),
+               column(3, ggvisOutput('wasted_abs'), style = "height:200px;")
+             ), 
+             fluidRow(
+               column(8, ggvisOutput('wasted'), style = "height:300px;")
              )
            )
   ),
