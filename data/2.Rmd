@@ -1,0 +1,4 @@
+This plot contains the average seat capacity of a plane splitted to countries (typically in a range of 100 and 200) and the average utilization of these seats.
+
+No doubt that most airlines optimize their capacity to passenger needs very well: those countries where passengers fly in bigger planes cannot afford a low utilization. In average, 25 to 50 seats are empty on each plane and this number seems indepdendent from the size of the plane. So the recipe is simple: go to those countries who use typically small planes because the number of empty seat is the biggest by there.
+
