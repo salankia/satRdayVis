@@ -153,7 +153,8 @@ shinyServer(function(input, output) {
       layer_points(data = timseriesSummerData(),
                    x = ~date, y = ~sumOfMovedPassengers, fill := "#a50026", size := 12)%>%
       set_options(width = "auto", height = "auto", resizable=FALSE) %>%
-      add_axis("y", title = "Number of passangers", title_offset = 50)
+      add_axis("y", title = "Number of passengers", title_offset = 50) %>%
+      add_axis("x", title = "Date")
   })
   
   timerseriesVis %>%

@@ -1,4 +1,4 @@
-This plot contains the number of registered passengers who flew from or to a particular country from Hungary in 2011. Plase note that these are direct flights, this strengthens the position of the typical transfer countries, like Germany or UK and can explain the weird fact that more people go to Austria by plane than e.g. to Portual.
+This plot contains the number of registered passengers who flew from or to a particular country from Hungary in 2011. Plase note that these are direct flights only which strengthens the position of the typical transfer countries, like Germany or UK, and can explain the weird fact that more people go to Austria by plane than e.g. to Portual.
 
 It is not surprising that seven in the top ten destination countries are on the [list of the busiest airports](https://en.wikipedia.org/wiki/List_of_busiest_airports_by_passenger_traffic#2011_statistics), but Romania and Belgium are in the forefront as well. The big conclusion here: if you do not like the busy airports, avoid the purple set of countries. 
 

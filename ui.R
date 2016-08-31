@@ -42,7 +42,7 @@ shinyUI(
              ),
              
              fluidRow(
-               column(6, ggvisOutput('map'), style = "height:300px;"),
+               column(6, ggvisOutput('map'), style = "height:350px;width:400px;"),
                column(6, includeMarkdown("data/3.Rmd"))
              ),
              
@@ -64,7 +64,7 @@ shinyUI(
                       radioButtons('summer', '',
                                    unique(as.character(flights_summary$country[flights_summary$category_of_ratio == "Summer_specific"])))
                ),
-               column(9, ggvisOutput('timeseries'), style = "height:300px;")
+               column(9, ggvisOutput('timeseries'), style = "height:500px;")
              )
            )
       )
