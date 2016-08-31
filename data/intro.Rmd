@@ -1,6 +1,6 @@
 _They say, "the journey of a thousand miles begins with a single step". But what if you would like to travel and are introvert or just simply hate crowd?_
 
-_This visualization project tries to help you select the ideal destination country if you would like to depart from the Liszt Ferenc Airport and avoid the crowd around you._
+_This visualization project tries to help you find the ideal destination country if you would like to depart from the Liszt Ferenc Airport and avoid the crowd around you._
 
 ------------
 

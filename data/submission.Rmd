@@ -1,0 +1,27 @@
+## Tips & Tricks to Avoid Crowd
+
+The visualization project tries to help find the ideal destination country for those users who would like to avoid the crowd: in the airport, on the plane and in the destination country as well.
+
+The classical shiny-based application contains three tabs for each subtopic, the main observations regarding the data set are the following.
+
+#In the airport
+
+This tab contains the number of registered passengers who flew from or to a particular country from Hungary in 2011. 
+
+It is not surprising that seven in the top ten destination countries are on the [list of the busiest airports](https://en.wikipedia.org/wiki/List_of_busiest_airports_by_passenger_traffic#2011_statistics), but Romania and Belgium are in the forefront as well. The dataset contained only direct flights (supposingly) which strengthens the position of the typical transfer countries, like Germany or UK, and can explain the weird fact that more people go to Austria by plane than e.g. to Portual.
+
+The big conclusion here: if you do not like the busy airports, avoid the purple set of countries. 
+
+# On the plane
+These plots aim at visualizing the average utilization of planes in certain countries. The small plot on the right shows the average number of passengers vs. the average capacity of the planes, while the larger plot at the bottom visulizes their ratio: the average utilization of these seats.
+
+Typically, 25 to 50 seats are empty on each plane, indepdendently from the size of it (green lane on the small plot). That means that countries where passengers fly in bigger planes have a typically better utilization (measured in %). Indeed, it sounds reasonable that large, empty planes do not fly above our head, because of economical/environmental/etc. causes.
+
+The recipe is simple again: a nice trick to avoid the crowd is to go to those countries who use typically small planes because the proportion of empty seats is bigger there. Or: going to the Emirates or the Czech Republic is fine too, there are plenty of seats there as well. 
+
+# In the country
+
+
+
+
+

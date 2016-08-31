@@ -1,0 +1,7 @@
+The final piece of advice: if you want to travel in the summer and still hate the crowd, do not fly either to the South or the North.
+
+Not surprisingly, lots of people fly during the warmer part of the year. Although there are countries where the traffic of the main season is at most only 20% larger than it is during the colder months, this ratio in most cases is above this threshold. The other end of the scale is represented by countries, where summer months generate 1.5 times more traffic, these countries lay typically on the southern or northern part of Europe. There are countries where the ratio is above 3. Can you find them?
+
+Hovering on the map on the left, you can figure out the summer/winter ratio of a country. With selecting countries with the radio buttons, you can compare the exact number of passengers (in a monthly granularity). The <20%, >20% & <50%, > 50% categories are represented by blue, orange and ruby colors, respectively. The grey timeseries shows the average of the passengers.
+
+After observing the plots, do you have an idea where to go?

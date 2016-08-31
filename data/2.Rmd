@@ -1,6 +1,6 @@
 These plots aim at visualizing the average utilization of planes in certain countries. The small plot on the right shows the average number of passengers vs. the average capacity of the planes, while the larger plot at the bottom visulizes their ratio: the average utilization of these seats.
 
-Typically, 25 to 50 seats are empty on each plane, indepdendently from the size of it (green lane on the small plot). That means that countries where passengers fly in bigger planes have a typically better % utilization. Indeed, it sounds reasonable that large, empty planes do not fly above our head, because of economical/environmental/etc. causes.
+Typically, 25 to 50 seats are empty on each plane, indepdendently from the size of it (green lane on the small plot). That means that countries where passengers fly in bigger planes have a typically better utilization (measured in %). Indeed, it sounds reasonable that large, empty planes do not fly above our head, because of economical/environmental/etc. causes.
 
 So the recipe is simple here: go to those countries who use typically small planes because the proportion of empty seats is bigger there. Or: go to the Emirates, there are plenty of seats there as well. 
 
